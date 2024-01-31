@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar color</title>
+    <script src="/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent('cubito', {
+            init: function () {
+                var box = document.createElement('a-box');
+                box.setAttribute('id', 'miCubo');
+                box.setAttribute('position', '-1 0.5 -3');
+                box.setAttribute('rotation', '0 0 0');
+                this.el.appendChild(box);
+            }
+        });
+    </script>
+</head>
+<body>
+    <input id="texture1" type="button" value="primera textura">
+    <input id="texture2" type="button" value="segunda textura">
+    <input id="texture3" type="button" value="tercera textura">
+    <input id="texture4" type="button" value="cuarta textura">
+    <input id="texture5" type="button" value="quinta textura">
+
+    <script src="index.js" ></script>
+
+    <a-scene>
+        <a-entity cubito></a-entity>
+    </a-scene>
+</body>
+</html>
